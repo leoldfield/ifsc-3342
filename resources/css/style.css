@@ -5,26 +5,27 @@ body{
 main{
     max-width:960px;
     background-color:white;
-    margin:20px auto;
+    margin:auto;
     padding:0px;
     border:6px solid #592202;
-    /*display:grid;
-    grid-template-columns: repeat(12, 100px);
-    grid-gap: 10px;
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 0px;
     grid-template-areas:
-               "....... header  header"
-               "sidebar content content";*/
+               "header header header header header header header header header header header header"
+               "sidebar content content content content content content content content content content content"
+               "footer footer footer footer footer footer footer footer footer footer footer footer";
 }
 
 header{
-    /*grid-area:header;*/
+    grid-area:header;
     background-image: url(/resources/img/mountain_header.jpg);
 	background-size:cover;
 	background-repeat:no-repeat;
 	background-position: center;
     margin:0px;
 	min-height:140px;
-	width:100%;
+	
 }
 
 .hide-text{
@@ -44,17 +45,20 @@ header h1 a{
 }
 
 nav ul{
+    grid-area:sidebar;
     margin:0px;
     padding:0px;
+    height:100%;
     display:flex;
-    align-items:left;
+    flex-direction:column;
     background-color:#592202;
 }
 
 nav ul li{
-    padding:10px;
+    padding: 12px 0px;
     margin:0px 12px;
     list-style-type: none;
+    text-align: center;
 }
 
 nav ul li a{
@@ -77,12 +81,28 @@ nav ul li a:hover {
 	border-bottom-color: #A66617;
 }
 
+main #content{
+    grid-area:content;
+    margin: 0px 12px;
+}
+
 main article{
-    padding: 0px 12px;
+    padding: 12px 0px;
 }
 
 main article h2{
     font-weight:bold;
+    margin: 12px 0px 6px 0px;
+    padding:0px;
     color:#A66617;
-    padding-top:12px;
+}
+main article p{
+    margin:0px;
+}
+
+#colophon{
+    grid-area:footer;
+    padding:0px 12px;
+    color:white;
+    background-color:#592202;
 }

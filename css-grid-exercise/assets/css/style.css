@@ -21,7 +21,7 @@ html {
     max-width:1140px;
     border:1px solid #000;
     margin:auto;
-    background-image: url("/css-grid-exercise/assets/resources/grid.png");
+    /*background-image: url("/css-grid-exercise/assets/resources/grid.png");*/
     display:grid;
     grid-template-columns: repeat(12, [col-] 1fr);
     grid-template-rows:auto;
