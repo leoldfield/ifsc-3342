@@ -8,9 +8,16 @@ main{
     margin:20px auto;
     padding:0px;
     border:6px solid #592202;
+    /*display:grid;
+    grid-template-columns: repeat(12, 100px);
+    grid-gap: 10px;
+    grid-template-areas:
+               "....... header  header"
+               "sidebar content content";*/
 }
 
 header{
+    /*grid-area:header;*/
     background-image: url(/resources/img/mountain_header.jpg);
 	background-size:cover;
 	background-repeat:no-repeat;

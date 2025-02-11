@@ -1,0 +1,69 @@
+html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+  .cf:before,
+  .cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+  }
+  
+  .cf:after {
+    clear: both;
+  }
+  
+  main{
+    max-width:1140px;
+    border:1px solid #000;
+    margin:auto;
+    background-image: url("/css-grid-exercise/assets/resources/grid.png");
+    display:grid;
+    grid-template-columns: repeat(12, [col-] 1fr);
+    grid-template-rows:auto;
+    grid-gap: 20px;
+    padding:20px;
+  }
+  
+  header.primary{
+    background: rgba(0, 0, 0, 0.4);
+    grid-column:1/13;
+    grid-row: 1/2;
+     /*float: left;*/
+  }
+
+  #content{
+    grid-column: 1/13;
+    grid-row: 2/3;
+    display:grid;
+    grid-template-columns:subgrid;
+    grid-template-rows:subgrid;
+  }
+  
+  #blog{
+    background: rgba(0, 0, 0, 0.6); 
+    grid-column:4/13;
+    grid-row:1/2;
+    padding:12px;
+    /*float: left;*/
+  }
+  
+  aside{
+    background: rgba(0, 0, 0, 0.3);
+    grid-column:1/4;
+    grid-row:1/2;
+    padding:12px;
+    /*float: left;*/
+    
+  }
+
+  #colophon{
+    background: rgba(0, 0, 0, 0.4);
+    grid-column:1/13;
+    grid-row:3/4;
+     /*float: left;*/
+  }
