@@ -1,4 +1,5 @@
 body{
+    margin:24px;
     background-color:#DFE9F3;
 }
 
@@ -7,7 +8,7 @@ main{
     background-color:white;
     margin:auto;
     padding:0px;
-    border:6px solid #592202;
+    border:6px solid #361501;
     display:grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 0px;
@@ -16,7 +17,7 @@ main{
 header{
     grid-column: 1 / 13;
     grid-row: 1 / 2;
-    background-image: url(/resources/img/mountain_header.jpg);
+    background-image: url(../img/mountain_header.jpg);
 	background-size:cover;
 	background-repeat:no-repeat;
 	background-position: center;
@@ -39,7 +40,7 @@ header h1{
 header h1 a{
     display:block;
 	min-height:140px;
-    border-bottom: 6px solid #592202;
+    border-bottom: 6px solid #361501;
 }
 
 nav{
@@ -53,7 +54,7 @@ nav ul{
     display:flex;
     justify-content: space-evenly;
     flex-wrap:wrap;
-    background-color:#592202;
+    background-color:#361501;
 }
 
 nav ul li{
@@ -83,23 +84,30 @@ nav ul li a:hover {
 	border-bottom-color: #A66617;
 }
 
-main #content{
+#content{
     grid-column: 1 / 13;
     grid-row: 3 / 4;
     margin: 0px 12px;
+    display:grid;
+    grid-template-columns:subgrid;
+    grid-template-rows:subgrid;
 }
 
-main article{
+#blog{
+    grid-column: 1 / 12;
+}
+
+article{
     padding: 12px 0px;
 }
 
-main article h2{
+article h2{
     font-weight:bold;
     margin: 12px 0px 6px 0px;
     padding:0px;
     color:#A66617;
 }
-main article p{
+article p{
     margin:0px;
 }
 
@@ -108,7 +116,11 @@ main article p{
     grid-row: 4 / 5;
     padding:0px 12px;
     color:white;
-    background-color:#592202;
+    background-color:#361501;
+}
+
+#colophon a, :visited{
+    color:#D99B29;
 }
   
   
@@ -131,5 +143,35 @@ main article p{
 
     #colophon{
         grid-row: 3 / 4;
+    }
+}
+
+@media (max-width:1150px) and (prefers-color-scheme: dark){ /*max-width set for testing purposes*/
+    body{
+        background-color:#361501;
+        
+    }
+
+    main{
+        border: 6px solid white;
+        color:white;
+        background-color:#3f271d;
+        border-color:#361501;
+    }
+
+    header h1 a{
+        border-color:#361501;
+    }
+
+    nav ul{
+        background-color:#361501;
+    }
+
+    article h2{
+        color:#D99B29;
+    }
+
+    #colophon{
+        background-color:#361501;
     }
 }
