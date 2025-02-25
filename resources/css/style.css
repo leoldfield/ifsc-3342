@@ -146,7 +146,7 @@ article p{
     }
 }
 
-@media (max-width:1150px) and (prefers-color-scheme: dark){ /*max-width set for testing purposes*/
+@media screen and (max-width:1150px) and (prefers-color-scheme: dark){ /*max-width set for testing purposes*/
     body{
         background-color:#361501;
         
