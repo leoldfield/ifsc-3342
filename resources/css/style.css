@@ -1,14 +1,21 @@
+:root {
+    --background:#d9d1cc;
+    --body:white;
+    --primary:#6e2b02;
+    --secondary: #D99B29;
+}
+
 body{
     margin:24px;
-    background-color:#DFE9F3;
+    background-color:var(--background);
 }
 
 main{
     max-width:960px;
-    background-color:white;
+    background-color:var(--body);
     margin:auto;
     padding:0px;
-    border:6px solid #361501;
+    border:6px solid var(--primary);
     display:grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 0px;
@@ -40,7 +47,7 @@ header h1{
 header h1 a{
     display:block;
 	min-height:140px;
-    border-bottom: 6px solid #361501;
+    border-bottom: 6px solid var(--primary);
 }
 
 nav{
@@ -54,7 +61,7 @@ nav ul{
     display:flex;
     justify-content: space-evenly;
     flex-wrap:wrap;
-    background-color:#361501;
+    background-color:var(--primary);
 }
 
 nav ul li{
@@ -75,13 +82,13 @@ nav ul li a:link, nav ul li a:visited {
 	text-decoration: none;
 	border-bottom-width: 2px;
 	border-bottom-style: solid;
-	border-bottom-color: #D99B29;
-	color: #D99B29;
+	border-bottom-color: var(--secondary);
+	color: var(--secondary);
 }
 nav ul li a:hover {
 	border-bottom-width: 2px;
 	border-bottom-style: solid;
-	border-bottom-color: #A66617;
+	border-bottom-color: var(--secondary);
 }
 
 #content{
@@ -116,11 +123,11 @@ article p{
     grid-row: 4 / 5;
     padding:0px 12px;
     color:white;
-    background-color:#361501;
+    background-color:var(--primary);
 }
 
 #colophon a, :visited{
-    color:#D99B29;
+    color:var(--secondary);
 }
   
   
@@ -143,35 +150,5 @@ article p{
 
     #colophon{
         grid-row: 3 / 4;
-    }
-}
-
-@media screen and (max-width:1150px) and (prefers-color-scheme: dark){ /*max-width set for testing purposes*/
-    body{
-        background-color:#361501;
-        
-    }
-
-    main{
-        border: 6px solid white;
-        color:white;
-        background-color:#3f271d;
-        border-color:#361501;
-    }
-
-    header h1 a{
-        border-color:#361501;
-    }
-
-    nav ul{
-        background-color:#361501;
-    }
-
-    article h2{
-        color:#D99B29;
-    }
-
-    #colophon{
-        background-color:#361501;
     }
 }
