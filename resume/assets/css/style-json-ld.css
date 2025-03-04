@@ -1,0 +1,94 @@
+:root{
+    --body-bg-color:#EDE0D0;
+    --main-bg-color:#D6C7AE;
+    --main-font-color:#615B55;
+    --accent-1:#C9865E;
+}
+
+html{
+    box-sizing:border-box;
+}
+
+*, *:before, *:after{
+    box-sizing:inherit;
+}
+
+body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color:var(--body-bg-color);
+    color:var(--main-font-color)
+}
+
+img{
+    max-width:100%;
+    border:2px solid var(--accent-1);
+}
+
+.container{
+    max-width:420px;
+    margin: 0 auto;
+    background-color:var(--main-bg-color)
+}
+
+.hidden{
+    border:0;
+    clip:rect(0 0 0 0);
+    height:1px;
+    margin:-1px;
+    overflow:hidden;
+    padding:0px;
+    position:absolute;
+    width:1px;
+    white-space: nowrap;
+}
+
+nav{
+    padding:1px;
+}
+
+nav ul{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding:20px 20px 0px 20px;
+}
+
+nav li{
+    list-style-type: none;
+    
+    margin:0px;
+    padding:6px;
+}
+
+nav li a:link, a:visited{
+    text-decoration-color: var(--accent-1);
+    text-decoration-thickness: 2px;
+    color:var(--main-font-color);
+    
+    font-size:0.85em;
+    font-variant: small-caps;
+    padding:12px;
+}
+
+main{
+    padding:1px 20px;
+}
+
+main h1{
+    color:var(--main-font-color);
+    display:flex;
+    justify-content:center;
+    text-align:center;
+    font-variant:small-caps;
+ 
+}
+
+main h1:before,
+main h1:after {
+  background-color: var(--accent-1);
+  content: "\a0";
+  flex-grow: 1;
+  height: 1px;
+  position: relative;
+  top: 1.6rem;
+  margin: 0px 6px;
+}
