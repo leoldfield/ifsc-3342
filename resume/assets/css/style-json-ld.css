@@ -3,6 +3,7 @@
     --main-bg-color:#D6C7AE;
     --main-font-color:#615B55;
     --accent-1:#C9865E;
+    --accent-2:#9C6849;
 }
 
 html{
@@ -27,7 +28,7 @@ img{
 .container{
     max-width:420px;
     margin: 0 auto;
-    background-color:var(--main-bg-color)
+    background-color:var(--main-bg-color);
 }
 
 .hidden{
@@ -42,6 +43,52 @@ img{
     white-space: nowrap;
 }
 
+main.container{
+    display:grid;
+    grid-template-areas: 
+    "title"
+    "about"
+    "skills"
+    "education"
+    "experience";
+}
+
+.page-title{
+    grid-area:title;
+}
+
+#about{
+    grid-area:about;
+    margin:0px 12px;
+    padding:0px 6px;
+    border-bottom:2px solid var(--accent-1);
+}
+
+#skills{
+    grid-area:skills;
+    margin:0px 12px;
+    padding:0px 6px;
+    border-bottom:2px solid var(--accent-1);
+}
+
+#experience{
+    grid-area:experience;
+    margin:0px 12px;
+    padding:0px 6px;
+    border-bottom:2px solid var(--accent-1);
+}
+
+#education{
+    grid-area:education;
+    margin:0px 12px;
+    padding:24px;
+    border-bottom:2px solid var(--accent-1);
+}
+
+main.container section{
+    
+}
+
 nav{
     padding:1px;
 }
@@ -54,16 +101,14 @@ nav ul{
 
 nav li{
     list-style-type: none;
-    
     margin:0px;
     padding:6px;
 }
 
 nav li a:link, a:visited{
     text-decoration-color: var(--accent-1);
-    text-decoration-thickness: 2px;
+    text-decoration-thickness: 1px;
     color:var(--main-font-color);
-    
     font-size:0.85em;
     font-variant: small-caps;
     padding:12px;
@@ -91,4 +136,29 @@ main h1:after {
   position: relative;
   top: 1.6rem;
   margin: 0px 6px;
+}
+
+h2 {
+    color:var(--accent-2);
+}
+
+.related-links{
+    padding:12px 0px;
+    border-top:1px solid var(--accent-1);
+    display:flex;
+    justify-content:space-around;
+}
+
+.related-links li{
+    list-style-type: none;
+}
+
+.related-links img{
+    max-width:25px;
+    max-height:25px;
+    border:none;
+}
+
+.job, .certificate{
+
 }
