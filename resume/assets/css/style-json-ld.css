@@ -85,19 +85,21 @@ main.container{
 
 /*---Main styling---*/
 
+body a, body a:visited{
+    color:var(--accent-2);
+    text-decoration-color: var(--accent-1);
+}
+
+body a:hover{
+    color:var(--accent-1);
+    text-decoration-color: var(--accent-1);
+}
+
 .container{
     max-width:500px;
     margin: 0 auto;
     background-color:var(--main-bg-color);
-}
-
-
-.container a, a:visited{
-    color:var(--accent-2);
-}
-
-.container a:hover{
-    color:var(--accent-1);
+    margin-bottom:12px;
 }
 
 .details{
@@ -140,7 +142,7 @@ nav li{
     padding:6px;
 }
 
-nav li a:link, a:visited{
+nav li a:link, li a:visited{
     text-decoration-color: var(--main-font-color);
     text-decoration-thickness: 1px;
     font-size:1em;
@@ -239,7 +241,7 @@ h2 {
         "about education"
         "about skills"
         "about experience";
-        border-bottom:2px solid var(--accent-1)
+        border-bottom:2px solid var(--accent-1);
     }
 
     #about{
