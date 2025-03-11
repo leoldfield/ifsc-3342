@@ -57,9 +57,21 @@ main.container{
 
 #about{
     grid-area:about;
+}
+
+.portrait{
+    grid-area:portrait;
+}
+
+.details{
+    grid-area:details;
     margin:0px 12px;
     padding:0px 6px;
     border-bottom:2px solid var(--accent-1);
+}
+
+.related-links{
+    grid-area:links;
 }
 
 #skills{
@@ -102,6 +114,11 @@ body a:hover{
     margin-bottom:12px;
 }
 
+.bio p{
+    padding:0px 24px;
+    text-align:center;
+}
+
 .details{
     margin-top:36px;
     display:grid;
@@ -126,6 +143,10 @@ body a:hover{
     border-bottom:1px solid var(--accent-3);
 }
 
+.details dt:last-of-type, dd:last-of-type{
+    border-bottom:none;
+}
+
 nav{
     padding:1px;
 }
@@ -138,6 +159,8 @@ nav ul{
 
 nav li{
     list-style-type: none;
+    font-size: 1.1em;
+    transform:translatey(-40%);
     margin:0px;
     padding:6px;
 }
@@ -201,6 +224,10 @@ h2 {
     border:none;
 }
 
+.related-links img:hover{
+    filter: invert(33%) sepia(15%) saturate(229%) hue-rotate(349deg) brightness(101%) contrast(92%);
+}
+
 .job, .certificate{
     padding:12px 0px 12px 0px;
     border-bottom:1px solid var(--accent-3);
@@ -238,17 +265,57 @@ h2 {
         max-width:1000px;
         grid-template-areas: 
         "title title"
-        "about education"
-        "about skills"
-        "about experience";
+        "about about"
+        "skills education"
+        "experience experience";
         border-bottom:2px solid var(--accent-1);
     }
 
     #about{
         border-bottom:none;
+        display:grid;
+        grid-template-areas: 
+        "portrait details details"
+        "..... links links";
+    }
+
+    .bio{
+        display:flex;
+        flex-direction: column;
+        justify-content:flex-end;
+    }
+
+    .details{
+        margin-top:12px;
+    }
+
+    .details dt{
+        grid-column: 1/2;
+    }
+    
+    .details dd{
+        grid-column:2/3;
     }
 
     #experience{
         border-bottom:none;
     }
+
+    /*
+    .experience{
+        display:subgrid;
+    }
+
+    .job *[itemprop="jobTitle"],
+    .job *[itemprop="name"],
+    .job *[itemprop="url"],
+    .job *[itemprop="startDate"],
+    .job *[itemprop="addressLocality"]{
+        grid-column: 1/2;
+    }
+
+    .job p{
+        grid-column: 2/3;
+    }
+    */
 }
