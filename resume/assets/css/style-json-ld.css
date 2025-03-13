@@ -217,6 +217,8 @@ h2 {
     list-style-type: none;
 }
 
+
+/*I'm very familiar with FontAwesome so I decided to practice embedding and editing images instead*/
 .related-links img{
     max-width:30px;
     max-height:30px;
@@ -259,8 +261,26 @@ h2 {
 
 
 
-@media screen and (min-width:800px){
+@media screen and (min-width:800px) and (max-width:1024px){
 
+    main.container{
+        max-width:750px;
+        margin:auto;
+        grid-template-areas: 
+        "title title"
+        "about about"
+        "skills education"
+        "experience experience";
+        border-bottom:2px solid var(--accent-1);
+    }
+
+    #skills{
+        width:25vw;
+    }
+}
+
+@media screen and (min-width:1025px){
+    
     main.container{
         max-width:1000px;
         grid-template-areas: 
@@ -268,7 +288,6 @@ h2 {
         "about about"
         "skills education"
         "experience experience";
-        border-bottom:2px solid var(--accent-1);
     }
 
     #about{
@@ -297,25 +316,44 @@ h2 {
         grid-column:2/3;
     }
 
+    
     #experience{
         border-bottom:none;
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows:auto;
     }
 
     /*
-    .experience{
-        display:subgrid;
+    #experience h2{
+        grid-column:1/5;
     }
-
-    .job *[itemprop="jobTitle"],
+    
+    .job{
+        grid-column:1/4;
+        display:grid;
+        grid-template-columns: subgrid;
+        grid-template-rows: auto;
+    }
+    
+    
+    .job *[itemprop="jobTitle"]
     .job *[itemprop="name"],
     .job *[itemprop="url"],
     .job *[itemprop="startDate"],
+    .job *[itemprop="endDate"],
     .job *[itemprop="addressLocality"]{
         grid-column: 1/2;
     }
+    .job *[itemprop="name"]{
+        grid-column:1/2;
+        background-color:blue;
+    }
 
     .job p{
-        grid-column: 2/3;
+        grid-column: 2/4;
+        background-color:red;
     }
     */
+    
 }
