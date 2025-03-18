@@ -322,6 +322,7 @@ h2 {
         display:grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows:auto;
+        
     }
 
     
@@ -332,6 +333,5 @@ h2 {
     #experience article:first-of-type{
         grid-column:1/3;
     }
-    
     
 }
