@@ -118,6 +118,13 @@ article p{
     margin:0px;
 }
 
+.answer{
+    margin-left:24px;
+    padding:6px 0px;
+    list-style-type:circle;
+    font-style:initial;
+}
+
 #colophon{
     grid-column: 1 / 13;
     grid-row: 4 / 5;

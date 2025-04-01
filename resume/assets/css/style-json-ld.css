@@ -5,6 +5,8 @@
     --accent-1:#C9865E;
     --accent-2:#9C6849;
     --accent-3:#EDE0D0;
+    --filter-1: invert(61%) sepia(15%) saturate(6639%) hue-rotate(340deg) brightness(70%) contrast(56%);
+    --filter-2: invert(33%) sepia(15%) saturate(229%) hue-rotate(349deg) brightness(101%) contrast(92%);
 }
 
 html{
@@ -222,12 +224,12 @@ h2 {
 .related-links img{
     max-width:30px;
     max-height:30px;
-    filter: invert(61%) sepia(15%) saturate(6639%) hue-rotate(340deg) brightness(70%) contrast(56%);
+    filter: var(--filter-1);
     border:none;
 }
 
 .related-links img:hover{
-    filter: invert(33%) sepia(15%) saturate(229%) hue-rotate(349deg) brightness(101%) contrast(92%);
+    filter: var(--filter-2);
 }
 
 .job, .certificate{
