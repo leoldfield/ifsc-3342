@@ -1,0 +1,19 @@
+:root{
+    --body-bg-color:#EDE0D0;
+    --main-bg-color:#D6C7AE;
+    --main-font-color:#615B55;
+    --accent-1:#C9865E;
+    --accent-2:#9C6849;
+    --accent-3:#EDE0D0;
+  }
+  
+  html{
+    box-sizing:border-box;
+  }
+  
+  *, *:before, *:after{
+    box-sizing:inherit;
+  }
+  
+  
+  
