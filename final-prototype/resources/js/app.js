@@ -1,0 +1,3 @@
+$('.carousel').carousel({
+    wrap:true
+})
