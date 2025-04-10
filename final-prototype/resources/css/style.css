@@ -3,8 +3,8 @@
   --main-bg-color:#DCC2A1;
   --main-bg-color-rgb: 220, 194, 161;
   --main-font-color:#615B55;
-  --accent-1:#968A55;
-  --accent-2:green;
+  --accent-1:green;
+  --accent-2:darkgreen;
   --accent-3:#fff;
 }
 
@@ -19,12 +19,12 @@ html{
 /* Basic Bootstrap Cosmetic Overrides */
 
 .btn-primary{
-  background-color: var(--accent-2);
-  border-color: darkgreen;
+  background-color: var(--accent-1);
+  border-color: var(--accent-2);
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active{
-  background-color: darkgreen;
+  background-color: var(--accent-2);
   border-color: white;
 }
 
@@ -38,7 +38,7 @@ html{
 }
 
 .navbar a:hover,  a :active{
-  color:green;
+  color:var(--accent-1);
 }
 
 
@@ -47,19 +47,31 @@ html{
 
 body{
   background-color: var(--body-bg-color);
+  background-image: url(../img/mountains.jpg);
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+main{
   background-image: url(../img/paperTexture.jpg);
   background-size:cover;
   background-repeat:no-repeat;
   background-position: center;
-}
-
-main{
   background-color: rgba(var(--main-bg-color-rgb), 0.5);
+  background-blend-mode:overlay;
   margin:auto;
 }
 
-main img{
+
+
+main #banner img{
   width:100%;
+}
+
+main #banner{
+  padding:24px 0px;
 }
 
 header img{
@@ -67,30 +79,51 @@ header img{
   height:100px;
 }
 
-#nav-banner{
+.navbar-toggler{
+  background-color: rgb(0, 0, 0, 0.5);
+}
+
+.img-border{
+  border: 4px solid var(--accent-1);
+  border-radius:4px;
+}
+
+#navbar{
   background-image: url(../img/banner.jpg);
   background-size:cover;
   background-repeat:no-repeat;
-  background-position: center;
+  background-position:center;
+  background-attachment:local;
 }
 
 #navbarSupportedContent{
   justify-content: flex-end;
 }
 
-main #banner h1{
-  padding-top:24px;
-}
-
 #carousel{
   max-height:500px;
   padding:0px;
-  border: 4px solid green;
-  border-radius:4px;
 }
 
 .carousel .carousel-item img {
   height: 400px;
   object-fit:cover;
   width: auto;
+}
+
+.carousel-caption{
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-caption{
+  padding:6px;
+}
+
+#download-buttons button{
+  margin:6px;
+}
+
+footer #copyright{
+  margin:auto;
+  background-color:rgba(var(--main-bg-color-rgb), 0.8);
 }
