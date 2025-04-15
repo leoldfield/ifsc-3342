@@ -1,0 +1,27 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Responsive Images</title>
+  <link rel="stylesheet" href="resources/css/style.css">
+</head>
+
+<header>
+    <h1><a href="/index.html">Home</a></h1>
+</header>
+
+<body>
+    <section class="images">
+        <section id="demo">
+            <img srcset="resources/img/mountains-sm.jpg 600w,
+        resources/img/mountains-md.jpg 1000w,
+        resources/img/mountains-lg.jpg 2000w"
+         src="resources/img/mountains-lg.jpg" sizes="(max-width: 600px) 480px,
+         (max-width: 1000px) 800px,
+         1000px"
+         alt="Mountain landscape">
+        </section>
+    </section>
+    
+</body>

@@ -1,0 +1,22 @@
+header{
+    display:block;
+}
+
+body{
+    background-color:cornflowerblue;
+}
+
+.images{
+    width:100%;
+    display:flex;
+    justify-content: center;
+}
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+#demo{
+    width:70vw;
+}
