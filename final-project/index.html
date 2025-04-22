@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tales of Soltaria, a Fantasy TTRPG</title>
   <link rel="stylesheet" href="resources/css/style.css">
+  <script src="resources/js/app.js"></script>
   <meta name="description" content="">
 
   <meta property="og:title" content="Soltaria, a Fantasy TTRPG">
@@ -19,13 +20,32 @@
 </head>
 
 <header>
-  <img class="banner" src="resources/img/banner.jpg">
-  <nav class="primary">
-    <a href="rules.html">Rules</a>
-    <a href="classes.html">Classes</a>
-    <a href="author.html">Author</a>
-    <a href="#">Download</a>
-  </nav>
+  <section class="banner">
+    <img src="resources/img/s.png">
+    <nav class="primary">
+      <!--
+      
+      
+      <div id="dropdown">
+        <button onclick="navDropdown()" class="dropbtn">Nav</button>
+      </div>
+      <div id="navDropdown" class="drop-content">
+        
+      </div>-->
+
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="rules.html">Rules</a>
+        <a href="classes.html">Classes</a>
+        <a href="author.html">Author</a>
+        <a href="#" id="downloadButton">Download</a>
+        </div>
+      </div> 
+
+
+    </nav>
+  </section>
 </header>
 
 <body>
