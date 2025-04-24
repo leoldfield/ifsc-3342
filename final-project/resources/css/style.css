@@ -1,10 +1,12 @@
 :root{
   --body-bg-color:#EDE0D0;
   --main-bg-color:#D6C7AE;
-  --main-font-color:#615B55;
-  --accent-1:#C9865E;
-  --accent-2:#9C6849;
-  --accent-3:#EDE0D0;
+  --main-font-color:#2A3323;
+  --accent-1:#3F6610;
+  --button-main:#5D9618;
+  --button-hover:#3F6610;
+  --nav-menu-bg:#EDE0D0;
+  --nav-menu-hover:#afc099;
   --small-view:400px;
   --med-view:800px;
   --large-view:1200px;
@@ -12,10 +14,23 @@
 
 html{
   box-sizing:border-box;
+  font-family: 'Palatino Linotype', Cochin, Cambria, Georgia, Times, 'Times New Roman', serif;
 }
 
 *, *:before, *:after{
   box-sizing:inherit;
+}
+
+.hidden{
+  border:0;
+  clip:rect(0 0 0 0);
+  height:1px;
+  margin:-1px;
+  overflow:hidden;
+  padding:0px;
+  position:absolute;
+  width:1px;
+  white-space: nowrap;
 }
 
 body{
@@ -26,62 +41,54 @@ body{
   background-repeat:no-repeat;
   background-position: center;
   background-attachment: fixed;
-}
-
-main{
-  background-image: url(../img/paperTexture.jpg);
-  background-size:cover;
-  background-repeat:no-repeat;
-  background-position: center;
-  background-color: rgba(var(--main-bg-color-rgb), 0.5);
-  background-blend-mode:overlay;
-  margin:auto;
-}
-
-header{
+  margin:0px 24px;
   display:grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows:auto;
 }
 
+header{
+  align-items: center;
+  grid-column: 1/13;
+}
+
 .banner{
-  height:100px;
+  height:120px;
   background-image: url(../img/banner.jpg);
   background-size:cover;
   background-repeat:no-repeat;
   background-position:center;
-  grid-column: 2/12;
-}
-
-nav{
-  background-color: rgb(0, 0, 0, 0.5);
-  height:70px;
-  margin:15px;
-  display:flex;
   align-items: center;
-  justify-content: right;
+  padding-top:10px;
 }
 
-.banner img{
-  display:inline;
-  height:90px;
-  margin:5px;
-  float:left;
+#nav-bar{
+  background-color: rgb(0, 0, 0, 0.5);
+  height:90%;
+  padding:15px;
+  margin:0px 20px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
- /* Dropdown Button */
- .dropbtn {
-  background-color: #3498DB;
-  color: white;
+#nav-bar img{
+  height:80px;
+}
+
+#oltaria{
+  display:none;
+}
+
+.dropbtn {
   padding: 16px;
   font-size: 16px;
   border: none;
-  cursor: pointer;
 }
 
 /* Dropdown button on hover & focus */
 .dropbtn:hover, .dropbtn:focus {
-  background-color: #2980B9;
+  background-color: var(--button-hover);
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -94,8 +101,7 @@ nav{
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
+  min-width: 100px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
@@ -103,15 +109,75 @@ nav{
 /* Links inside the dropdown */
 .dropdown-content a {
   color: black;
+  background-color: var(--nav-menu-bg);
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {background-color: var(--nav-menu-hover);}
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;} 
 
+
+/*Styling buttons*/
+.button, .button a{
+  color:white;
+  background-color: var(--button-main);
+  border:none;
+  cursor:pointer;
+  padding:6px;
+}
+
+.button:hover, .button:focus, .button a:hover{
+  background-color: var(--button-hover);
+}
+
+main{
+  background-image: url(../img/paperTexture.jpg);
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position: center;
+  background-color: rgba(var(--main-bg-color-rgb), 0.5);
+  background-blend-mode:overlay;
+  margin:auto;
+  grid-column: 1/13;
+  display:grid;
+  grid-template-columns: subgrid;
+}
+
+article {
+  grid-column: 3/11;
+  margin:24px 0px;
+}
+
+article img{
+  width:100%;
+  max-width:400px;
+}
+
+#download-buttons{
+  display:flex;
+  flex-wrap:nowrap;
+  justify-content: space-evenly;
+}
+
+#download-buttons .button{
+  font-size:1.1em;
+  margin:6px;
+  border-radius:12px;
+}
+
+.img-border{
+  border: 6px solid var(--accent-1);
+  border-radius:6px;
+}
+
+
+
+footer{
+  grid-column: 1/13;
+}
 
