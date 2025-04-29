@@ -145,8 +145,8 @@ header{
 
 main{
   background-image: url(../img/paperTexture.jpg);
-  background-size:cover;
-  background-repeat:no-repeat;
+  background-size:contain;
+  background-repeat:repeat;
   background-position: center;
   background-color: rgba(var(--main-bg-rgb), 0.8);
   background-blend-mode:overlay;
@@ -156,7 +156,7 @@ main{
   grid-template-columns: subgrid;
 }
 
-h1, h2{
+h1, h2, h3{
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color:var(--accent-1);
 }
