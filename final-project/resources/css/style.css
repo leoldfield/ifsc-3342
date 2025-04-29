@@ -1,8 +1,11 @@
 :root{
   --body-bg-color:#EDE0D0;
   --main-bg-color:#D6C7AE;
+  --main-bg-rgb:214, 199, 174;
   --main-font-color:#2A3323;
+  --main-font-rgb:42, 51, 35;
   --accent-1:#3F6610;
+  --accent-2:#56A3D1;
   --button-main:#5D9618;
   --button-hover:#3F6610;
   --nav-menu-bg:#EDE0D0;
@@ -23,7 +26,7 @@ html{
 
 .hidden{
   border:0;
-  clip:rect(0 0 0 0);
+  clip-path:rect(0 0 0 0);
   height:1px;
   margin:-1px;
   overflow:hidden;
@@ -107,7 +110,7 @@ header{
 }
 
 /* Links inside the dropdown */
-.dropdown-content a {
+.dropdown-content a, .dropdown-content a:visited{
   color: black;
   background-color: var(--nav-menu-bg);
   padding: 12px 16px;
@@ -131,6 +134,11 @@ header{
   padding:6px;
 }
 
+.fa-solid{
+  width:20px;
+  height:20px;
+}
+
 .button:hover, .button:focus, .button a:hover{
   background-color: var(--button-hover);
 }
@@ -140,7 +148,7 @@ main{
   background-size:cover;
   background-repeat:no-repeat;
   background-position: center;
-  background-color: rgba(var(--main-bg-color-rgb), 0.5);
+  background-color: rgba(var(--main-bg-rgb), 0.8);
   background-blend-mode:overlay;
   margin:auto;
   grid-column: 1/13;
@@ -148,12 +156,18 @@ main{
   grid-template-columns: subgrid;
 }
 
-article {
-  grid-column: 3/11;
-  margin:24px 0px;
+h1, h2{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color:var(--accent-1);
 }
 
-article img{
+section {
+  grid-column: 2/12;
+  margin:0px;
+  padding:24px 0px;
+}
+
+.primary img{
   width:100%;
   max-width:400px;
 }
@@ -165,7 +179,7 @@ article img{
 }
 
 #download-buttons .button{
-  font-size:1.1em;
+  font-weight: bold;
   margin:6px;
   border-radius:12px;
 }
@@ -175,9 +189,107 @@ article img{
   border-radius:6px;
 }
 
+/* Slideshow container */
+.slideshow-container {
+  max-width:600px;
+  max-height:400px;
+  position: relative;
+  margin: auto;
+  overflow:hidden;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+.mySlides img{
+  width:100%;
+}
+
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  background-color:rgba(var(--main-font-rgb), 0.3);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(var(--main-font-rgb),0.8);
+}
+
+/* Caption text */
+.slideshow-text {
+  color: #f2f2f2;
+  background-color:rgba(var(--main-font-rgb),0.5);
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: var(--button-main);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: var(--button-hover);
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
 
 
 footer{
   grid-column: 1/13;
+  background-color:var(--accent-1);
+  height:36px;
+  padding:6px;
+  color:var(--main-bg-color)
+}
+
+footer a, footer a:visited{
+  color:var(--accent-2);
+}
+
+footer a:hover{
+  color:var(--button-main)
 }
 

@@ -4,11 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Author | Tales of Soltaria, a Fantasy TTRPG</title>
+  <title>Classes | Tales of Soltaria</title>
   <link rel="stylesheet" href="resources/css/style.css">
+  <link rel="stylesheet" href="resources/css/classes-style.css">
+  <script src="resources/js/app.js"></script>
   <meta name="description" content="">
 
-  <meta property="og:title" content="Author | Soltaria, a Fantasy TTRPG">
+  <meta property="og:title" content="Soltaria, a Fantasy TTRPG">
   <meta property="og:type" content="">
   <meta property="og:url" content="">
   <meta property="og:image" content="">
@@ -17,23 +19,92 @@
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icon.png">
 
-  <link rel="manifest" href="site.webmanifest">
-  <meta name="theme-color" content="#fafafa">
+  <script src="https://kit.fontawesome.com/a254b4d335.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-
-  <header id="about">
-    <img src="resources/img/placeholder-500x500.jpg" alt="placeholder">
-    <h1>Title</h1>
-    <p>A short description of the system's classes. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  <header>
+    <section class="banner">
+      <div id="nav-bar">
+        <a href="index.html">
+          <img srcset="resources/img/s.png 600w,
+          resources/img/soltaria.png 1000w"
+           src="resources/img/s.png" sizes="(max-width: 600px) 480px, 800px,
+           1000px"
+           alt="Tales of Soltaria">        
+        </a>
+        <nav class="primary">
+          <div class="dropdown">
+            <button onclick="myFunction()" class="button dropbtn">Navigation</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="classes.html">Classes</a>
+              <a href="setting.html">Setting</a>
+              <a href="author.html">Author</a>
+              <div class="button"><a href="#">Download</a></div>
+            </div>
+          </div> 
+        </nav>
+      </div>
+    </section>
   </header>
 
+
   <main>
-  <h2>Class Name</h2>
-  <p>A more in-depth description of a class. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <section class="primary">
+      <h1>Classes</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </section>
+    
+    <article id="engine">
+      <img src="resources/img/classes/engine.jpg">
+      <h2>Engine</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </article>
+
+    <article id="jack">
+      <img src="resources/img/classes/jack.jpg">
+      <h2>Jack</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </article>
+
+    <article id="pathfinder">
+      <img src="resources/img/classes/pathfinder.jpg">
+      <h2>Pathfinder</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </article>
+
+    <article id="sentinel">
+      <img src="resources/img/classes/sentinel.jpg">
+      <h2>Sentinel</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </article>
+
+    <article id="spellwright">
+      <img src="resources/img/classes/spellwright.jpg">
+      <h2>Spellwright</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </article>
+
+    <article id="troubadour">
+      <img src="resources/img/classes/troubadour.jpg">
+      <h2>Troubadour</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </article>
+
+    <article id="witch">
+      <img src="resources/img/classes/witch.jpg">
+      <h2>Witch</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </article>
+    
   </main>
 
+
+  <footer>
+    &copy; 2025 Lin Oldfield | <a href="#top">Top</a>
+  </footer>
+
 </body>
+
 
 </html>

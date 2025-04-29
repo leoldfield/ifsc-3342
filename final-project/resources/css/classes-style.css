@@ -1,0 +1,47 @@
+article{
+    grid-column:2/12;
+}
+
+article h2{
+    margin-top:6px;
+}
+
+article img{
+    height:200px;
+    float:left;
+    margin:6px 12px;
+    border: 3px solid #fff;
+    border-radius:6px;
+}
+
+article:nth-child(odd) img{
+    float:right;
+}
+
+#engine img{
+    border-color:#FF7701;
+}
+
+#jack img{
+    border-color:#EAB708;
+}
+
+#pathfinder img{
+    border-color:#077013;
+}
+
+#sentinel img{
+    border-color:#263475;
+}
+
+#spellwright img{
+    border-color:#7217BD;
+}
+
+#troubadour img{
+    border-color:#E9E895;
+}
+
+#witch img{
+    border-color:#9D0B0B;
+}
