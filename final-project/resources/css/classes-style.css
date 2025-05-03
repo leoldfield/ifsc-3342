@@ -1,22 +1,52 @@
+:root{
+    --accent-1:#3F6610;
+    --accent-2:#afc099;
+}
+
 article{
     grid-column:2/12;
-    margin-bottom:24px;
+    padding: 48px 0px;
+    border-bottom: 2px solid var(--accent-2);
 }
 
 article h2{
-    margin-top:6px;
+    margin:6px 0px;
+}
+
+article p{
+    margin-top:0px;
 }
 
 article img{
-    height:clamp(200px, 30vw, 400px);
+    height:clamp(250px, 30vw, 400px);
     float:left;
-    margin:6px 12px;
+    margin:6px 36px 6px 12px;
     border: 3px solid #fff;
     border-radius:6px;
+    display:block;
 }
 
 article:nth-child(odd) img{
     float:right;
+    margin:6px 12px 6px 36px;
+}
+
+article ul li{
+    list-style-position: inside;
+}
+
+article ul{
+    padding-left:12px;
+}
+
+h4{
+    color:var(--accent-1);
+    margin-top:0px;
+    padding-top:0px;
+}
+
+section{
+    padding-bottom:0px;
 }
 
 #engine img{
@@ -45,4 +75,71 @@ article:nth-child(odd) img{
 
 #witch img{
     border-color:#9D0B0B;
+}
+
+@media screen and (min-width:700px){
+
+    article{
+        display:grid;
+        grid-template-areas: 
+        "img title"
+        "img content"
+        "lists lists";
+    }
+
+    article:nth-child(odd){
+        grid-template-areas: 
+        "title img"
+        "content img"
+        "lists lists";
+    }
+
+
+    article h2{
+        grid-area:title;
+    }
+
+    article p{
+        grid-area:content;
+    }
+
+    article img{
+        grid-area:img;
+        float:none;
+    }
+
+    article .lists{
+        grid-area:lists;
+        display:grid;
+        grid-template-areas:
+        "reasons touchstones";
+    }
+
+    article .reasons{
+        grid-area:reasons;
+    }
+
+    article .touchstones{
+        grid-area:touchstones;
+        margin-left:24px;
+    }
+}
+
+@media screen and (min-width:1150px){
+
+    article{
+        display:grid;
+        grid-template-areas: 
+        "img title title"
+        "img content content"
+        "img lists lists";
+    }
+
+    article:nth-child(odd){
+        grid-template-areas: 
+        "title title img"
+        "content content img"
+        "lists lists img";
+    }
+
 }
