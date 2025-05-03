@@ -167,21 +167,26 @@ section {
   padding:24px 0px;
 }
 
+
 .primary img{
   width:100%;
   max-width:400px;
+  display:block;
+  margin:auto;
 }
 
 #download-buttons{
   display:flex;
   flex-wrap:nowrap;
   justify-content: space-evenly;
+  min-height:75px;
 }
 
 #download-buttons .button{
   font-weight: bold;
   margin:6px;
   border-radius:12px;
+  padding:12px;
 }
 
 .img-border{
