@@ -1,0 +1,26 @@
+body{
+    background-color:blanchedalmond;
+}
+
+main{
+    margin:auto;
+    padding:0px 24px;
+}
+
+h1, h2, h1 a, h1 a:visited{
+    color:darkred;
+}
+
+#audio, #video{
+    margin:48px;
+    padding: 12px;
+    border-radius:12px;
+}
+
+#audio{
+    background-color:darksalmon;
+}
+
+#video{
+    background-color:salmon;
+}
